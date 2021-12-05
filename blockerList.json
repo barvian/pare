@@ -1,0 +1,33 @@
+[
+    {
+        "action": {
+            "type": "css-display-none",
+            "selector": "[href*='/likes-you'], [href*='/gold-home'], :not(.messageList) > .messageListItem, .App + div, body > .H\\(100\\%\\)[aria-hidden='true'] + div"
+        },
+        "trigger": {
+            "url-filter": ".*",
+            "if-domain": ["tinder.com"]
+        }
+    },
+    {
+        "action": {
+            "type": "css-display-none",
+            "selector": "#root > :first-child[style*='height:'], .page--who-likes-you .tabs ~ div, .page--intros .tabs ~ div, .page--who-likes-you .page-content, .page--intros .page-content, .navbar-likes-count, [href*='\/who-likes-you']:not(.navbar-link), [href*='\/intros']:not(.navbar-link), .stacks-menu-content > div > div:not(:nth-child(1)):not(:nth-child(2)):not(:nth-last-child(1)), .messages-promo, .messagesAndMatchesBlank-upsells, [class*='boosts-promo']"
+        },
+        "trigger": {
+            "url-filter": ".*",
+            "if-domain": ["okcupid.com", "www.okcupid.com"]
+        }
+    },
+    {
+        "action": {
+            "type": "css-display-none",
+            "selector": "[data-qa-role='match-queue-tab-section'], .sidebar-extra__promos"
+        },
+        "trigger": {
+            "url-filter": ".*",
+            "if-domain": ["bumble.com"]
+        }
+    }
+]
+
