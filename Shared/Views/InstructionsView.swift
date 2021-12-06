@@ -25,10 +25,10 @@ struct InstructionsView: View {
     var body: some View {
         VStack (alignment: .leading, spacing: 30) {
             VStack (alignment: .leading, spacing: 10) {
-                Text("Pare is not enabled.")
-                    .font(.title)
+                Text("Pare isn't enabled")
+                    .font(.system(.largeTitle, design: .rounded))
                     .accessibilityIdentifier("extension disabled")
-                Text("Follow these steps to enable:")
+                Text("Follow these steps to turn it on:")
             }
 
             #if os(macOS)

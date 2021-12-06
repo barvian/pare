@@ -13,7 +13,7 @@ func makeStoreURL(appID: String, action: String) -> URL {
 }
 
 struct EnabledView: View {
-    let reviewURL = makeStoreURL(appID:"1544743900", action: "write-review")
+    let reviewURL = makeStoreURL(appID:"1598824876", action: "write-review")
     let reportWebsiteURL = URL(string: "https://forms.gle/mFhJGceqixSEtzmPA")!
     
     #if os(macOS)
@@ -27,9 +27,9 @@ struct EnabledView: View {
             
             VStack (alignment: .leading, spacing: 5) {
                 Text("Pare is enabled")
-                    .font(.title)
+                    .font(.system(.largeTitle, design: .rounded))
                     .accessibilityIdentifier("extension enabled")
-                 Text("Enjoy dating apps without the noise 👋")
+                Text("Enjoy your degamified dating apps 👋")
             }
 
             VStack (alignment: .leading, spacing: 10) {
@@ -44,9 +44,7 @@ struct EnabledView: View {
             }
 
             VStack (alignment: .leading, spacing: 10) {
-                Text("Love it? ")
-                    .bold() +
-                    Text("Spread it! ")
+                Text("Enjoying Pare?")
 
                 Link(destination: reviewURL, label: {
                     Text("Review on App Store")

@@ -4,24 +4,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Pare – Degamified dating apps</title>
+  <title>Pare – Dating de-gamified</title>
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="mask-icon" href="safari-pinned-tab.svg" color="#000000">
   <meta name="description" content="Hides like counts and other gamifying elements in popular dating app sites.">
-  <meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/323121488/e0261800-44be-11eb-82bf-59b88f24a70c">
   <meta name="twitter:creator" content="@barvian">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Pare - Degamified dating apps">
+  <meta name="twitter:title" content="Pare - Dating de-gamified">
   <meta name="twitter:description" content="Hides like counts and other gamifying elements in popular dating app sites.">
   <meta property="og:image" content="https://repository-images.githubusercontent.com/323121488/e0261800-44be-11eb-82bf-59b88f24a70c">
-  <meta property="og:site_name" content="Hush">
+  <meta property="og:site_name" content="Pare">
   <meta property="og:type" content="object">
-  <meta property="og:title" content="Pare - Degamified dating apps">
+  <meta property="og:title" content="Pare - Dating de-gamified">
   <meta property="og:url" content="https://pare.dating">
   <meta property="og:description" content="Hides like counts and other gamifying elements in popular dating app sites.">
-  <meta name="apple-itunes-app" content="app-id=1544743900">
+  <meta name="apple-itunes-app" content="app-id=1598824876">
+
+  <link rel="stylesheet" href="https://use.typekit.net/zvl6dzt.css">
+  <style>
+    @font-face {
+      font-family: recoleta;
+      src: url('recoleta-bold.ttf')  format('truetype');
+      font-swap: auto;
+      font-weight: bold;
+    }
+  </style>
 
   <style type="text/css">
   	*, *::before, *::after {
@@ -31,11 +40,146 @@
   		padding: 0;
   	}
 
+  	:root {
+  		background: var(--bg);
+      color: var(--base);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.25;
+      overflow-x: hidden;
+
+  		--bg: #FFEDC5;
+      --off-bg: #eec497;
+      --base: #262322;
+      --sans: sofia-pro, sans-serif;
+      --serif: recoleta, serif;
+  	}
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      overflow: hidden;
+      justify-content: center;
+      font-size: var(--step-0);
+      padding: var(--space-s-l);
+      max-width: calc(var(--space-s-l) * 2 + 40rem);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+      body:not(.macos) .mac-only,
+      body.macos .not-mac {
+        display: none;
+      }
+
+    h1 {
+      font-weight: bold;
+      font-family: var(--serif);
+      font-size: var(--step-3);
+      margin-bottom: var(--space-xs);
+    }
+
+    h2 {
+      font-weight: bold;
+      font-family: var(--serif);
+      font-size: var(--step-1);
+      margin-bottom: var(--space-xs);
+      margin-top: var(--space-m);
+    }
+
+    h1, h2 {
+      line-height: 1.1;
+    }
+
+    h1, h2, p, ul, ol {
+      max-width: 60ch;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .small {
+      display: block;
+      font-size: var(--step--2);
+      opacity: 0.75;
+    }
+
+  	.logo {
+      height: var(--space-2xl-3xl);
+      transform: translateX(-15.5%);
+      margin-bottom: var(--space-xs);
+  	}
+
+    .download {
+      height: var(--step-4);
+    }
+
+    .sites {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-start;
+      gap: var(--space-s);
+      margin-bottom: var(--space-m);
+      margin-top: var(--space-m);
+    }
+
+      .sites .small {
+        margin-top: var(--space-3xs);
+      }
+
+    .site, .site img {
+      display: block;
+    }
+
+    .site img {
+      font-size: var(--step-2);
+      height: 1em;
+      max-width: 100%;
+    }
+
+      .site.okcupid img {
+        /* the p throws this off */
+        height: 1.275em;
+      }
+
+      .site.bumble {
+        order: 3;
+      }
+
+    @media screen and (min-width: 600px) {
+        .sites {
+          flex-flow: row nowrap;
+          gap: var(--space-m);
+        }
+
+        .site img {
+          font-size: var(--step-4);
+        }
+
+        .site.bumble {
+          order: 0;
+        }
+
+        .site.okcupid img {
+          margin-top: -0.1em;
+        }
+      }
+
+    footer {
+      color: var(--off-bg);
+      font-size: var(--step--2);
+      margin-top: var(--space-l);
+    }
+
   	/* @link https://utopia.fyi/type/calculator?c=320,21,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
 
 :root {
   --fluid-min-width: 320;
-  --fluid-max-width: 1140;
+  --fluid-max-width: 960;
 
   --fluid-screen: 100vw;
   --fluid-bp: calc(
@@ -44,7 +188,7 @@
   );
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 960px) {
   :root {
     --fluid-screen: calc(var(--fluid-max-width) * 1px);
   }
@@ -161,10 +305,41 @@
 
   /* Custom pairs */
   --space-s-l: calc(((var(--fc-s-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-s-min)) * var(--fluid-bp));
-}
+} 
   </style>
 </head>
 <body>
-	<h1>Pare</h1>
+	<img class="logo" src="./icon.png" alt="Pare app icon" />
+	<h1>De-gamified dating apps</h1>
+  <p>A free Safari extension that hides the gamifying metrics from your favorite dating sites:</p>
+  <!-- <h2>Currently supports</h2> -->
+  <div class="sites">
+    <div class="site tinder">
+      <a target="_blank" href="https://tinder.com">
+        <img src="./tinder.svg" alt="Tinder.com logo" />
+      </a>
+    </div>
+    <div class="site bumble">
+      <a target="_blank" href="https://bumble.com/app">
+        <img src="./bumble.svg" alt="Bumble.com logo" />
+      </a>
+      <span class="small">*Bumble's website only supports desktop browsers.</span>
+    </div>
+    <div class="site okcupid"><a target="_blank" href="https://okcupid.com"><img src="./okcupid.svg" alt="OkCupid.com logo" /></a></div>
+  </div>
+  <a href="https://apps.apple.com/app/id1598824876">
+    <img class="download not-mac" src="./ios-app-store.svg" alt="iOS App Store logo" />
+    <img class="download mac-only" src="./mac-app-store.svg" alt="macOS App Store logo" />
+  </a>
+  <footer>
+    Pare is neither affiliated with, associated to, nor endorsed by Tinder, Inc., OkCupid, or Bumble Inc. in any way. The Apple logo, Safari, App Store, iPhone, iPad and Mac are trademarks of Apple, Inc.
+  </footer>
+
+  
+  <script>
+  if (navigator.userAgent.indexOf('Macintosh') !== -1) {
+    document.body.classList.add('macos')
+  }
+  </script>
 </body>
 </html>
