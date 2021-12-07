@@ -1,3 +1,7 @@
+---
+layout: article
+---
+
 # Privacy Policy
 
 Maxwell Barvian built the Pare app as an Open Source app. This SERVICE is provided by Maxwell Barvian at no cost and is intended for use as is.
@@ -24,7 +28,7 @@ These Services do not address anyone under the age of 13. Pare does not knowingl
 
 Pare may update its Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. 
 
-This policy is effective as of 2021-12-06
+This policy is effective as of 2021-12-06.
 
 ## Contact Us
 

@@ -1,0 +1,229 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	background: var(--bg);
+  color: var(--base);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.25;
+  overflow-x: hidden;
+
+	--bg: #FFEDC5;
+  --off-bg: #eec497;
+  --base: #262322;
+  --sans: sofia-pro, sans-serif;
+  --serif: recoleta, serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  overflow: hidden;
+  justify-content: center;
+  font-size: var(--step-0);
+  padding-bottom: var(--space-s-l);
+  padding-top: var(--space-s-l);
+}
+
+  body:not(.macos) .mac-only,
+  body.macos .not-mac {
+    display: none;
+  }
+
+.inner {
+  padding-left: var(--space-s-l);
+  padding-right: var(--space-s-l);
+  max-width: calc(var(--space-s-l) * 2 + 40rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-weight: bold;
+  font-family: var(--serif);
+  font-size: var(--step-3);
+  margin-bottom: var(--space-xs);
+}
+
+h2 {
+  font-weight: bold;
+  font-family: var(--serif);
+  font-size: var(--step-1);
+  margin-bottom: var(--space-xs);
+  margin-top: var(--space-m);
+}
+
+h1, h2 {
+  line-height: 1.1;
+}
+
+h1, h2, p, ul, ol {
+  max-width: 60ch;
+}
+
+p + p {
+  margin-top: var(--space-xs);
+}
+
+a {
+  color: inherit;
+}
+
+.small {
+  display: block;
+  font-size: var(--step--2);
+  opacity: 0.75;
+}
+
+.logo {
+  display: block;
+  height: var(--space-2xl-3xl);
+  transform: translateX(-15.5%);
+  margin-bottom: var(--space-xs);
+}
+
+footer {
+  color: var(--off-bg);
+  font-size: var(--step--2);
+  margin-top: var(--space-l);
+}
+
+/* @link https://utopia.fyi/type/calculator?c=320,21,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+:root {
+--fluid-min-width: 320;
+--fluid-max-width: 960;
+
+--fluid-screen: 100vw;
+--fluid-bp: calc(
+(var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
+  (var(--fluid-max-width) - var(--fluid-min-width))
+);
+}
+
+@media screen and (min-width: 960px) {
+:root {
+--fluid-screen: calc(var(--fluid-max-width) * 1px);
+}
+}
+
+:root {
+--f--2-min: 14.58;
+--f--2-max: 15.36;
+--step--2: calc(
+((var(--f--2-min) / 16) * 1rem) + (var(--f--2-max) - var(--f--2-min)) *
+  var(--fluid-bp)
+);
+
+--f--1-min: 17.50;
+--f--1-max: 19.20;
+--step--1: calc(
+((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) *
+  var(--fluid-bp)
+);
+
+--f-0-min: 21.00;
+--f-0-max: 24.00;
+--step-0: calc(
+((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *
+  var(--fluid-bp)
+);
+
+--f-1-min: 25.20;
+--f-1-max: 30.00;
+--step-1: calc(
+((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
+  var(--fluid-bp)
+);
+
+--f-2-min: 30.24;
+--f-2-max: 37.50;
+--step-2: calc(
+((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
+  var(--fluid-bp)
+);
+
+--f-3-min: 36.29;
+--f-3-max: 46.88;
+--step-3: calc(
+((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
+  var(--fluid-bp)
+);
+
+--f-4-min: 43.55;
+--f-4-max: 58.59;
+--step-4: calc(
+((var(--f-4-min) / 16) * 1rem) + (var(--f-4-max) - var(--f-4-min)) *
+  var(--fluid-bp)
+);
+
+--f-5-min: 52.25;
+--f-5-max: 73.24;
+--step-5: calc(
+((var(--f-5-min) / 16) * 1rem) + (var(--f-5-max) - var(--f-5-min)) *
+  var(--fluid-bp)
+);
+}
+
+/* @link https://utopia.fyi/space/calculator?c=320,21,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+:root {
+--fc-3xs-min: (var(--fc-s-min) * 0.25); 
+--fc-3xs-max: (var(--fc-s-max) * 0.25);
+
+--fc-2xs-min: (var(--fc-s-min) * 0.5); 
+--fc-2xs-max: (var(--fc-s-max) * 0.5);
+
+--fc-xs-min: (var(--fc-s-min) * 0.75); 
+--fc-xs-max: (var(--fc-s-max) * 0.75);
+
+--fc-s-min: (var(--f-0-min)); 
+--fc-s-max: (var(--f-0-max));
+
+--fc-m-min: (var(--fc-s-min) * 1.5); 
+--fc-m-max: (var(--fc-s-max) * 1.5);
+
+--fc-l-min: (var(--fc-s-min) * 2); 
+--fc-l-max: (var(--fc-s-max) * 2);
+
+--fc-xl-min: (var(--fc-s-min) * 3); 
+--fc-xl-max: (var(--fc-s-max) * 3);
+
+--fc-2xl-min: (var(--fc-s-min) * 4); 
+--fc-2xl-max: (var(--fc-s-max) * 4);
+
+--fc-3xl-min: (var(--fc-s-min) * 6); 
+--fc-3xl-max: (var(--fc-s-max) * 6);
+
+/* T-shirt sizes */
+--space-3xs: calc(((var(--fc-3xs-min) / 16) * 1rem) + (var(--fc-3xs-max) - var(--fc-3xs-min)) * var(--fluid-bp));
+--space-2xs: calc(((var(--fc-2xs-min) / 16) * 1rem) + (var(--fc-2xs-max) - var(--fc-2xs-min)) * var(--fluid-bp));
+--space-xs: calc(((var(--fc-xs-min) / 16) * 1rem) + (var(--fc-xs-max) - var(--fc-xs-min)) * var(--fluid-bp));
+--space-s: calc(((var(--fc-s-min) / 16) * 1rem) + (var(--fc-s-max) - var(--fc-s-min)) * var(--fluid-bp));
+--space-m: calc(((var(--fc-m-min) / 16) * 1rem) + (var(--fc-m-max) - var(--fc-m-min)) * var(--fluid-bp));
+--space-l: calc(((var(--fc-l-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-l-min)) * var(--fluid-bp));
+--space-xl: calc(((var(--fc-xl-min) / 16) * 1rem) + (var(--fc-xl-max) - var(--fc-xl-min)) * var(--fluid-bp));
+--space-2xl: calc(((var(--fc-2xl-min) / 16) * 1rem) + (var(--fc-2xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
+--space-3xl: calc(((var(--fc-3xl-min) / 16) * 1rem) + (var(--fc-3xl-max) - var(--fc-3xl-min)) * var(--fluid-bp));
+
+/* One-up pairs */
+--space-3xs-2xs: calc(((var(--fc-3xs-min) / 16) * 1rem) + (var(--fc-2xs-max) - var(--fc-3xs-min)) * var(--fluid-bp));
+--space-2xs-xs: calc(((var(--fc-2xs-min) / 16) * 1rem) + (var(--fc-xs-max) - var(--fc-2xs-min)) * var(--fluid-bp));
+--space-xs-s: calc(((var(--fc-xs-min) / 16) * 1rem) + (var(--fc-s-max) - var(--fc-xs-min)) * var(--fluid-bp));
+--space-s-m: calc(((var(--fc-s-min) / 16) * 1rem) + (var(--fc-m-max) - var(--fc-s-min)) * var(--fluid-bp));
+--space-m-l: calc(((var(--fc-m-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-m-min)) * var(--fluid-bp));
+--space-l-xl: calc(((var(--fc-l-min) / 16) * 1rem) + (var(--fc-xl-max) - var(--fc-l-min)) * var(--fluid-bp));
+--space-xl-2xl: calc(((var(--fc-xl-min) / 16) * 1rem) + (var(--fc-2xl-max) - var(--fc-xl-min)) * var(--fluid-bp));
+--space-2xl-3xl: calc(((var(--fc-2xl-min) / 16) * 1rem) + (var(--fc-3xl-max) - var(--fc-2xl-min)) * var(--fluid-bp));
+
+/* Custom pairs */
+--space-s-l: calc(((var(--fc-s-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-s-min)) * var(--fluid-bp));
+} 
