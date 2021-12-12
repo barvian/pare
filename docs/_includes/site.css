@@ -96,6 +96,13 @@ footer {
   margin-top: var(--space-l);
 }
 
+#bmc-wbtn {
+  bottom: var(--space-s-m) !important;
+  right: var(--space-s-m) !important;
+  box-shadow: 0px 19px 26px -9px rgba(255, 0, 0, 0.2) !important;
+}
+
+
 /* @link https://utopia.fyi/type/calculator?c=320,21,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
 
 :root {
