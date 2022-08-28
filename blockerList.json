@@ -28,6 +28,46 @@
             "url-filter": ".*",
             "if-domain": ["bumble.com"]
         }
+    },
+    {
+        "action": {
+            "type": "css-display-none",
+            "selector": "[class*='count'], .like-shot.current-user-likes, #details-modal .stats-container, h2.list-label, .shot-statistic[class*='views'], .bucket-meta:not(.bucket-timestamp)"
+        },
+        "trigger": {
+            "url-filter": ".*",
+            "if-domain": ["dribbble.com"]
+        }
+    },
+    {
+        "action": {
+            "type": "css-display-none",
+            "selector": "[class*='ProjectCover-stats'], [class*='Appreciate-count'], [class*='projectStat'], [class*='CoverStats-stats'], [class*='UserInfo-userStats'], [class*='Stats-stats']"
+        },
+        "trigger": {
+            "url-filter": ".*",
+            "if-domain": ["behance.net", "www.behance.net"]
+        }
+    },
+    {
+        "action": {
+            "type": "css-display-none",
+            "selector": "[class*='uttonCount'], [class*='commentOptions'] [class*='voteButton'] [class*='buttonContainer'], [data-test*='vote-button'] [class*='font'], [class*='comment'][class*='counter'] [class*='font'], [class*='meta'] [class*='actions']"
+        },
+        "trigger": {
+            "url-filter": ".*",
+            "if-domain": ["www.producthunt.com", "producthunt.com"]
+        }
+    },
+    {
+        "action": {
+            "type": "css-display-none",
+            "selector": "[aria-label*='count']"
+        },
+        "trigger": {
+            "url-filter": ".*",
+            "if-domain": ["medium.com"]
+        }
     }
 ]
 
